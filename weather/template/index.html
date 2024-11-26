@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-lg-6">
+                <form action="" method="post">
+                    {% csrf_token %}
+                <div style="margin-left: 150px ;margin-top: 50px;">
+                    <input type="text" name="city" id="">
+                    <input type="submit" value="Submit">
+                </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <p style="font-size: 2vw;"><b>City : </b>{{data.city}}</p>
+                <p style="font-size: 2vw;"><b>Description : </b>{{data.dis}}</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
